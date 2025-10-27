@@ -64,8 +64,8 @@ function withdraw(accountId, amount) {
 
   if (amount + fee <= account.balance) {
     account.balance -= (amount + fee);
-    let msg = `💸 Withdrawal of ₦${amount.toFixed(2)} successful for ${account.accountHolder}.<br>
-                Transaction fee: ₦${fee.toFixed(2)}<br>
+    let msg = `Withdrawal of ₦${amount.toFixed(2)} successful for ${account.accountHolder}.<br>
+               Transaction fee: ₦${fee.toFixed(2)}<br>
                Your remaining Balance is: ₦${account.balance.toFixed(2)}`;
     displayResult(msg);
   } else {
