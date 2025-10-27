@@ -1,5 +1,5 @@
 // My Global Variable declearation
-const BANK_NAME = "Infinity Bank Inc.";
+const bankName = "Infinity Bank Inc.";
 
 // Customer Accounts (Array of Objects)
 let customerAccounts = [
@@ -42,7 +42,7 @@ function deposit(accountId, amount) {
   if (account && amount > 0) {
     account.balance += amount;
     let msg = `✅ Deposit of ₦${amount.toFixed(2)} successful for ${account.accountHolder}.<br>
-               🏦 Thank you for banking with ${BANK_NAME}.<br>
+               🏦 Thank you for banking with ${bankName}.<br>
                New Balance: ₦${account.balance.toFixed(2)}`;
     displayResult(msg);
   } else {
@@ -52,7 +52,7 @@ function deposit(accountId, amount) {
 
 // Withdrawal Function and fee
 function withdraw(accountId, amount) {
-  const FEE_RATE = 0.01; // variable declearation for withdrawal transaction fee
+  const feeRate = 0.01; // variable declearation for withdrawal transaction fee
   let account = findAccount(accountId);
 
   if (!account) {
@@ -60,7 +60,7 @@ function withdraw(accountId, amount) {
     return;
   }
 
-  let fee = amount * FEE_RATE;
+  let fee = amount * feeRate;
 
   if (amount + fee <= account.balance) {
     account.balance -= (amount + fee);
@@ -86,7 +86,7 @@ function checkBalance(accountId) {
 
 // My Scope Check
 try {
-  console.log(FEE_RATE); // ReferenceError in console
+  console.log(feeRate); // ReferenceError in console
 } catch (err) {
   console.log("Cannot access FEE_RATE outside withdraw():", err.message);
 }
