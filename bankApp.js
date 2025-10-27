@@ -88,7 +88,7 @@ function checkBalance(accountId) {
 try {
   console.log(feeRate); // ReferenceError in console
 } catch (err) {
-  console.log("Cannot access FEE_RATE outside withdraw():", err.message);
+  console.log("Cannot access feeRate outside withdraw():", err.message);
 }
 
 // Function for form Submission
