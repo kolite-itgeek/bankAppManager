@@ -69,7 +69,7 @@ function withdraw(accountId, amount) {
                Your remaining Balance is: ₦${account.balance.toFixed(2)}`;
     displayResult(msg);
   } else {
-    displayResult(`⚠️ Insufficient funds! ${account.accountHolder} has only ₦${account.balance.toFixed(2)}.`, true);
+    displayResult(`Insufficient funds! ${account.accountHolder} has only ₦${account.balance.toFixed(2)}.`, true);
   }
 }
 
@@ -80,7 +80,7 @@ function checkBalance(accountId) {
     let msg = `${account.accountHolder}'s Balance: ₦${account.balance.toFixed(2)} (${account.type} Account)`;
     displayResult(msg);
   } else {
-    displayResult("❌ Account not found.", true);
+    displayResult("Account not found.", true);
   }
 }
 
