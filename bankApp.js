@@ -42,11 +42,11 @@ function deposit(accountId, amount) {
   if (account && amount > 0) {
     account.balance += amount;
     let msg = `✅ Deposit of ₦${amount.toFixed(2)} successful for ${account.accountHolder}.<br>
-               🏦 Thank you for banking with ${bankName}.<br>
+               Thank you for banking with ${bankName}.<br>
                New Balance: ₦${account.balance.toFixed(2)}`;
     displayResult(msg);
   } else {
-    displayResult("❌ Invalid deposit amount or account not found.", true);
+    displayResult("Invalid deposit amount or account not found.", true);
   }
 }
 
@@ -56,7 +56,7 @@ function withdraw(accountId, amount) {
   let account = findAccount(accountId);
 
   if (!account) {
-    displayResult("❌ Account not found.", true);
+    displayResult("Account not found.", true);
     return;
   }
 
