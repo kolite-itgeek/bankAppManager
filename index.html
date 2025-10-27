@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>🏦 Infinity Bank Inc. - Account Manager</h2>
+      <div class="textForm">
+        <p>Use the form below to perform transactions.</p>
+        <p>Happy Banking!!</p>
+      </div>
+
+      <form id="bankForm">
+        <label for="accountId">Account ID:</label>
+        <input
+          type="number"
+          id="accountId"
+          placeholder="e.g. 1001-customerNum"
+          required
+        />
+
+        <label for="amount">Amount:</label>
+        <input
+          type="number"
+          id="amount"
+          placeholder="Enter amount"
+          step="0.01"
+        />
+
+        <label for="action">Choose Action:</label>
+        <select id="action">
+          <option value="checkBalance" id="noInput">Check Balance</option>
+          <option value="deposit">Deposit</option>
+          <option value="withdraw">Withdraw</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="output" class="output-box">
+        <h3>💬 Transaction Results</h3>
+        <div id="resultArea">No transaction yet...</div>
+      </div>
+    </div>
+
+    <script src="bankApp.js"></script>
+  </body>
+</html>
